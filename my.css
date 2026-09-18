@@ -1,0 +1,42 @@
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.navbar-brand {
+  letter-spacing: -0.5px;
+}
+
+.diary-card {
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.diary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.diary-card .card-body {
+  padding: 24px;
+}
+
+.diary-card .card-footer {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.card-text {
+  line-height: 1.7;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.badge {
+  padding: 8px 10px;
+  border-radius: 8px;
+}
