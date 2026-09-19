@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,6 @@
     rel="stylesheet"
   >
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="my.css">
 </head>
 
@@ -41,8 +41,9 @@
 
       <div class="col-lg-8 col-xl-7">
 
-        <!-- Page Header -->
+        <!-- Header -->
         <div class="mb-4">
+
           <p class="text-secondary mb-2">
             오늘 하루는 어땠나요?
           </p>
@@ -50,17 +51,19 @@
           <h1 class="fw-bold">
             새 일기 작성
           </h1>
+
         </div>
 
 
-        <!-- Diary Form -->
+        <!-- Form Card -->
         <div class="card diary-form-card">
 
           <div class="card-body p-4 p-md-5">
 
-            <form>
+            <form action="index.html" method="get">
 
-              <!-- Title -->
+
+              <!-- 제목 -->
               <div class="mb-4">
 
                 <label
@@ -68,6 +71,7 @@
                   class="form-label fw-semibold"
                 >
                   제목
+                  <span class="text-danger">*</span>
                 </label>
 
                 <input
@@ -76,13 +80,23 @@
                   id="title"
                   name="title"
                   placeholder="오늘 하루를 한 문장으로 표현해보세요"
+
                   required
+                  minlength="2"
+                  maxlength="30"
+                  pattern="[가-힣a-zA-Z0-9\s!?.,]+"
+
+                  title="제목은 2자 이상 30자 이하로 입력해주세요."
                 >
+
+                <div class="form-text">
+                  제목은 2자 이상 30자 이하로 입력해주세요.
+                </div>
 
               </div>
 
 
-              <!-- Date -->
+              <!-- 날짜 -->
               <div class="mb-4">
 
                 <label
@@ -90,6 +104,7 @@
                   class="form-label fw-semibold"
                 >
                   날짜
+                  <span class="text-danger">*</span>
                 </label>
 
                 <input
@@ -97,13 +112,17 @@
                   class="form-control"
                   id="date"
                   name="date"
+
+                  min="2020-01-01"
+                  max="2026-12-31"
+
                   required
                 >
 
               </div>
 
 
-              <!-- Mood -->
+              <!-- 기분 -->
               <div class="mb-4">
 
                 <label
@@ -111,44 +130,96 @@
                   class="form-label fw-semibold"
                 >
                   오늘의 기분
+                  <span class="text-danger">*</span>
                 </label>
 
                 <select
                   class="form-select"
                   id="mood"
                   name="mood"
+                  required
                 >
 
-                  <option selected disabled>
+                  <option value="" selected disabled>
                     오늘의 기분을 선택해주세요
                   </option>
 
-                  <option value="happy">
-                    😊 행복
-                  </option>
-
-                  <option value="good">
-                    😄 좋음
-                  </option>
-
-                  <option value="normal">
-                    🌿 평범
-                  </option>
-
-                  <option value="tired">
-                    😴 피곤
-                  </option>
-
-                  <option value="sad">
-                    😢 슬픔
-                  </option>
+                  <option value="happy">😊 행복</option>
+                  <option value="good">😄 좋음</option>
+                  <option value="normal">🌿 평범</option>
+                  <option value="tired">😴 피곤</option>
+                  <option value="sad">😢 슬픔</option>
 
                 </select>
 
               </div>
 
 
-              <!-- Content -->
+              <!-- 날씨 -->
+              <div class="mb-4">
+
+                <label
+                  for="weather"
+                  class="form-label fw-semibold"
+                >
+                  오늘의 날씨
+                  <span class="text-danger">*</span>
+                </label>
+
+                <select
+                  class="form-select"
+                  id="weather"
+                  name="weather"
+                  required
+                >
+
+                  <option value="" selected disabled>
+                    오늘의 날씨를 선택해주세요
+                  </option>
+
+                  <option value="sunny">☀️ 맑음</option>
+                  <option value="cloudy">☁️ 흐림</option>
+                  <option value="rainy">🌧️ 비</option>
+                  <option value="snowy">❄️ 눈</option>
+                  <option value="windy">🌬️ 바람</option>
+
+                </select>
+
+              </div>
+
+
+              <!-- 장소 -->
+              <div class="mb-4">
+
+                <label
+                  for="location"
+                  class="form-label fw-semibold"
+                >
+                  장소
+                  <span class="text-danger">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="location"
+                  name="location"
+
+                  placeholder="오늘 하루를 보낸 장소를 입력해주세요"
+
+                  required
+                  minlength="2"
+                  maxlength="30"
+                >
+
+                <div class="form-text">
+                  장소는 2자 이상 30자 이하로 입력해주세요.
+                </div>
+
+              </div>
+
+
+              <!-- 내용 -->
               <div class="mb-4">
 
                 <label
@@ -156,16 +227,26 @@
                   class="form-label fw-semibold"
                 >
                   내용
+                  <span class="text-danger">*</span>
                 </label>
 
                 <textarea
                   class="form-control"
                   id="content"
                   name="content"
+
                   rows="10"
+
                   placeholder="오늘 있었던 일이나 기억하고 싶은 순간을 자유롭게 적어보세요."
+
                   required
+                  minlength="10"
+                  maxlength="1000"
                 ></textarea>
+
+                <div class="form-text">
+                  일기 내용은 10자 이상 1000자 이하로 작성해주세요.
+                </div>
 
               </div>
 
@@ -186,7 +267,7 @@
                   type="submit"
                   class="btn btn-dark px-4"
                 >
-                 <a href="index.html" class="text-white text-decoration-none">일기 저장</a>
+                  일기 저장
                 </button>
 
               </div>

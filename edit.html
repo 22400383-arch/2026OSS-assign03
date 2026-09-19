@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,6 @@
     rel="stylesheet"
   >
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="my.css">
 </head>
 
@@ -20,6 +20,7 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white border-bottom">
+
     <div class="container py-2">
 
       <a class="navbar-brand fw-bold" href="index.html">
@@ -31,6 +32,7 @@
       </a>
 
     </div>
+
   </nav>
 
 
@@ -41,11 +43,12 @@
 
       <div class="col-lg-8 col-xl-7">
 
+
         <!-- Header -->
         <div class="mb-4">
 
           <p class="text-secondary mb-2">
-            작성한 일기를 수정해보세요.
+            작성한 일기의 내용을 수정할 수 있습니다.
           </p>
 
           <h1 class="fw-bold">
@@ -55,14 +58,19 @@
         </div>
 
 
-        <!-- Edit Form -->
+        <!-- Form -->
         <div class="card diary-form-card">
 
           <div class="card-body p-4 p-md-5">
 
-            <form>
+            <form
+              action="index.html"
+              method="get"
+              onsubmit="return confirm('정말 수정하시겠습니까?');"
+            >
 
-              <!-- Title -->
+
+              <!-- 제목 -->
               <div class="mb-4">
 
                 <label
@@ -70,6 +78,7 @@
                   class="form-label fw-semibold"
                 >
                   제목
+                  <span class="text-danger">*</span>
                 </label>
 
                 <input
@@ -77,14 +86,21 @@
                   class="form-control form-control-lg"
                   id="title"
                   name="title"
+
                   value="즐거웠던 하루"
+
                   required
+                  minlength="2"
+                  maxlength="30"
+                  pattern="[가-힣a-zA-Z0-9\s!?.,]+"
+
+                  title="제목은 2자 이상 30자 이하로 입력해주세요."
                 >
 
               </div>
 
 
-              <!-- Date -->
+              <!-- 날짜 -->
               <div class="mb-4">
 
                 <label
@@ -92,6 +108,7 @@
                   class="form-label fw-semibold"
                 >
                   날짜
+                  <span class="text-danger">*</span>
                 </label>
 
                 <input
@@ -99,14 +116,19 @@
                   class="form-control"
                   id="date"
                   name="date"
+
                   value="2026-09-18"
+
+                  min="2020-01-01"
+                  max="2026-12-31"
+
                   required
                 >
 
               </div>
 
 
-              <!-- Mood -->
+              <!-- 기분 -->
               <div class="mb-4">
 
                 <label
@@ -114,14 +136,21 @@
                   class="form-label fw-semibold"
                 >
                   오늘의 기분
+                  <span class="text-danger">*</span>
                 </label>
 
                 <select
                   class="form-select"
                   id="mood"
                   name="mood"
+                  required
                 >
 
+                  <option value="">
+                    기분을 선택해주세요
+                  </option>
+
+                  <!-- 기존 값 -->
                   <option value="happy" selected>
                     😊 행복
                   </option>
@@ -147,7 +176,86 @@
               </div>
 
 
-              <!-- Content -->
+              <!-- 날씨 -->
+              <div class="mb-4">
+
+                <label
+                  for="weather"
+                  class="form-label fw-semibold"
+                >
+                  오늘의 날씨
+                  <span class="text-danger">*</span>
+                </label>
+
+                <select
+                  class="form-select"
+                  id="weather"
+                  name="weather"
+                  required
+                >
+
+                  <option value="">
+                    날씨를 선택해주세요
+                  </option>
+
+                  <!-- 기존 값 -->
+                  <option value="sunny" selected>
+                    ☀️ 맑음
+                  </option>
+
+                  <option value="cloudy">
+                    ☁️ 흐림
+                  </option>
+
+                  <option value="rainy">
+                    🌧️ 비
+                  </option>
+
+                  <option value="snowy">
+                    ❄️ 눈
+                  </option>
+
+                  <option value="windy">
+                    🌬️ 바람
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <!-- 장소 -->
+              <div class="mb-4">
+
+                <label
+                  for="location"
+                  class="form-label fw-semibold"
+                >
+                  장소
+                  <span class="text-danger">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="location"
+                  name="location"
+
+                  value="영일대 해수욕장"
+
+                  required
+                  minlength="2"
+                  maxlength="30"
+                >
+
+                <div class="form-text">
+                  장소는 2자 이상 30자 이하로 입력해주세요.
+                </div>
+
+              </div>
+
+
+              <!-- 내용 -->
               <div class="mb-4">
 
                 <label
@@ -155,51 +263,46 @@
                   class="form-label fw-semibold"
                 >
                   내용
+                  <span class="text-danger">*</span>
                 </label>
 
                 <textarea
                   class="form-control"
                   id="content"
                   name="content"
+
                   rows="10"
+
                   required
+                  minlength="10"
+                  maxlength="1000"
                 >오늘은 친구들과 맛있는 음식을 먹고 카페에 갔다. 오랜만에 만나서 이런저런 이야기를 나누었다. 날씨도 좋아서 기분 좋은 하루였다.</textarea>
+
+                <div class="form-text">
+                  일기 내용은 10자 이상 1000자 이하로 작성해주세요.
+                </div>
 
               </div>
 
 
               <!-- Buttons -->
               <div
-                class="d-flex justify-content-between align-items-center pt-3 border-top"
+                class="d-flex justify-content-end gap-2 pt-3 border-top"
               >
 
-                <!-- Delete -->
-                <button
-                  type="button"
-                  class="btn btn-outline-danger"
+                <a
+                  href="index.html"
+                  class="btn btn-outline-secondary px-4"
                 >
-                  삭제
+                  취소
+                </a>
+
+                <button
+                  type="submit"
+                  class="btn btn-dark px-4"
+                >
+                  수정
                 </button>
-
-
-                <!-- Cancel / Save -->
-                <div class="d-flex gap-2">
-
-                  <a
-                    href="index.html"
-                    class="btn btn-outline-secondary px-4"
-                  >
-                    취소
-                  </a>
-
-                  <button
-                    type="submit"
-                    class="btn btn-dark px-4"
-                  >
-                   <a href="index.html" class="text-white text-decoration-none">수정 완료</a>
-                  </button>
-
-                </div>
 
               </div>
 
