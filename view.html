@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>일기 상세보기 | My Diary</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="my.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container py-2">
+
+      <a class="navbar-brand fw-bold" href="index.html">
+        My Diary
+      </a>
+
+      <a href="index.html" class="btn btn-outline-secondary">
+        목록으로
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- Main -->
+  <main class="container my-5">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-8 col-xl-7">
+
+        <!-- Header -->
+        <div class="mb-4">
+          <p class="text-secondary mb-2">
+            소중한 하루의 기록
+          </p>
+
+          <h1 class="fw-bold">
+            일기 상세보기
+          </h1>
+        </div>
+
+
+        <!-- Diary Detail Card -->
+        <article class="card diary-detail-card">
+
+          <div class="card-body p-4 p-md-5">
+
+            <!-- Date & Mood -->
+            <div
+              class="d-flex justify-content-between
+                     align-items-center mb-4"
+            >
+
+              <span class="badge text-bg-light mood-badge">
+                😊 행복
+              </span>
+
+              <span class="text-secondary">
+                2026.09.18
+              </span>
+
+            </div>
+
+
+            <!-- Title -->
+            <h2 class="fw-bold mb-4">
+              즐거웠던 하루
+            </h2>
+
+
+            <hr>
+
+
+            <!-- Content -->
+            <div class="diary-content my-4">
+
+              <p>
+                오늘은 친구들과 맛있는 음식을 먹고
+                카페에 갔다.
+              </p>
+
+              <p>
+                오랜만에 만나서 이런저런 이야기를 나누었다.
+                서로 바쁘다 보니 자주 만나지는 못했지만
+                오랜만에 만나도 여전히 편해서 좋았다.
+              </p>
+
+              <p>
+                카페에서 커피를 마신 후에는 근처를
+                천천히 산책했다. 날씨도 좋아서 걷는 내내
+                기분이 좋았다.
+              </p>
+
+              <p>
+                별거 아닌 하루였지만 이런 평범한 순간들이
+                나중에는 좋은 기억으로 남을 것 같다.
+              </p>
+
+            </div>
+
+
+            <hr>
+
+
+            <!-- Buttons -->
+            <div
+              class="d-flex justify-content-between
+                     align-items-center mt-4"
+            >
+
+              <!-- Delete -->
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+              >
+                삭제
+              </button>
+
+
+              <!-- List / Edit -->
+              <div class="d-flex gap-2">
+
+                <a
+                  href="index.html"
+                  class="btn btn-outline-secondary px-4"
+                >
+                  목록
+                </a>
+
+                <a
+                  href="edit.html"
+                  class="btn btn-dark px-4"
+                >
+                  수정
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>

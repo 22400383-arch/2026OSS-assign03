@@ -1,126 +1,162 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Album example</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Diary</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="my.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <header data-bs-theme="dark">
-        <div class="navbar navbar-dark bg-dark shadow-sm">
-            <a href="#" class="navbar-brand d-flex align-items-center" style="margin: 0 28px">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-                    viewBox="0 0 24 24">
-                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
-                    <circle cx="12" cy="13" r="4"></circle>
-                </svg>
-                <strong>Album</strong>
-            </a>
-        </div>
-    </header>
-    <main>
-        <section class="py-5 text-center container">
-            <div class="row py-lg-5">
-                <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-light">My Album!</h1>
-                    <p class="lead text-body-secondary">
-                        추억을 저장하세요 !
-                    </p>
-                    <a href="#" class="btn btn-primary my2">upload picture</a>
-                </div>
-            </div>
-        </section>
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shdow-sm">
-                            <svg aria-label="Placeholder: Thumbnail" class="bd-placeholder-img card-img-top"
-                                height="225" preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect>
-                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">first memory</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    This is a wider card with supporting text below as a natural lead-in to additional
-                                    content. This content is a little bit longer.
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-body-secondary">24H ago</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">second memory</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">20H ago</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm"> <svg aria-label="Placeholder: Thumbnail"
-                                class="bd-placeholder-img card-img-top" height="225"
-                                preserveAspectRatio="xMidYMid slice" role="img" width="100%"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%"
-                                    fill="#eceeef" dy=".3em">third memory</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group"> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">View</button> <button type="button"
-                                            class="btn btn-sm btn-outline-secondary">Edit</button> </div> <small
-                                        class="text-body-secondary">10H ago</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer class="text-body-secondary py-5">
-        <div class="container">
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">Album example is © Bootstrap, but please download and customize it for yourself!</p>
-            <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a
-                    href="/docs/5.3/getting-started/introduction/">getting started guide</a></p>
-        </div>
-    </footer>
-</body>
 
+  <nav class="navbar navbar-expand-lg bg-white border-bottom">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold" href="index.html">
+        My Diary
+      </a>
+
+      <a href="add.html" class="btn btn-dark">
+        + 새 일기 작성
+      </a>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+
+    <section class="mb-5">
+      <p class="text-secondary mb-2">나의 하루를 기록해보세요!</p>
+      <h1 class="fw-bold">오늘의 일기</h1>
+    </section>
+
+    <section class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card diary-card h-100">
+          <div class="card-body">
+
+            <div class="d-flex justify-content-between mb-3">
+              <span class="badge text-bg-light">😊 행복</span>
+              <small class="text-secondary">2026.09.18</small>
+            </div>
+
+            <h4 class="card-title fw-bold">
+              즐거웠던 하루
+            </h4>
+
+            <p class="card-text text-secondary">
+              오늘은 친구들과 맛있는 음식을 먹고 카페에 갔다.
+              오랜만에 만나서 이런저런 이야기를 나누었다...
+            </p>
+
+          </div>
+
+          <div class="card-footer bg-white border-0 pb-4">
+            <a href="view.html"
+               class="btn btn-outline-dark btn-sm">
+              상세보기
+            </a>
+
+            <a href="edit.html"
+               class="btn btn-outline-secondary btn-sm">
+              수정
+            </a>
+
+            <button class="btn btn-outline-danger btn-sm">
+              삭제
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Diary Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card diary-card h-100">
+          <div class="card-body">
+
+            <div class="d-flex justify-content-between mb-3">
+              <span class="badge text-bg-light">😴 피곤</span>
+              <small class="text-secondary">2026.09.17</small>
+            </div>
+
+            <h4 class="card-title fw-bold">
+              바쁜 하루
+            </h4>
+
+            <p class="card-text text-secondary">
+              오늘은 해야 할 일이 정말 많았다.
+              조금 피곤했지만 계획했던 일을 모두 끝내서 뿌듯하다...
+            </p>
+
+          </div>
+
+          <div class="card-footer bg-white border-0 pb-4">
+            <a href="view.html"
+               class="btn btn-outline-dark btn-sm">
+              상세보기
+            </a>
+
+            <a href="edit.html"
+               class="btn btn-outline-secondary btn-sm">
+              수정
+            </a>
+
+            <button class="btn btn-outline-danger btn-sm">
+              삭제
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Diary Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card diary-card h-100">
+          <div class="card-body">
+
+            <div class="d-flex justify-content-between mb-3">
+              <span class="badge text-bg-light">🌿 평범</span>
+              <small class="text-secondary">2026.09.16</small>
+            </div>
+
+            <h4 class="card-title fw-bold">
+              평범하지만 좋은 날
+            </h4>
+
+            <p class="card-text text-secondary">
+              특별한 일은 없었지만 여유롭게 하루를 보냈다.
+              저녁에는 산책을 하면서 생각을 정리했다...
+            </p>
+
+          </div>
+
+          <div class="card-footer bg-white border-0 pb-4">
+            <a href="view.html"
+               class="btn btn-outline-dark btn-sm">
+              상세보기
+            </a>
+
+            <a href="edit.html"
+               class="btn btn-outline-secondary btn-sm">
+              수정
+            </a>
+
+            <button class="btn btn-outline-danger btn-sm">
+              삭제
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
 </html>
